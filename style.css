@@ -28,6 +28,12 @@
     position: absolute;
     bottom: 0;
     right: 0;
+
+    display: none; /* invisibile senza la classe active*/
+}
+
+.details.active{
+    display: block;
 }
 
 .details h2{
@@ -41,10 +47,16 @@
     display: flex;
     flex-direction: column;
     height: 320px;
+    position: relative;
 }
 
-img{
+.main-image img{
     width: 100%;
+    display: none; /* invisibile senza la classe active*/
+}
+
+.main-image img.active{
+    display: block;
 }
 
 .thumbnails img {
@@ -56,4 +68,27 @@ img{
 .thumbnails img.active {
     filter: brightness(1);
     border: 2px solid lightgray;
+}
+
+
+i{
+    align-self: center;
+    position: absolute;
+    z-index: 2;
+    font-size: 20px;
+    padding: 5px;
+    background-color: lightgray;
+    border-radius: 50%;
+}
+
+i:hover{
+    cursor: pointer;
+}
+
+
+i.fas.fa-chevron-up {
+    top: 10px;
+}
+i.fas.fa-chevron-down {
+    bottom: -30px;
 }
