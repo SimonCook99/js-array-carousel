@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    width: 60%;
+    margin: 150px auto;
+
+    display: flex;
+}
+
+.main-image{
+    position: relative;
+
+    width: 70%;
+}
+
+
+.details{
+    width: 450px;
+    color: white;
+    text-align: right;
+    padding: 20px;
+
+    position: absolute;
+    bottom: 0;
+}
+
+.details h2{
+    margin-bottom: 10px;
+}
+
+
+.thumbnails{
+    width: 30%;
+}
+
+img{
+    width: 100%;
+}
