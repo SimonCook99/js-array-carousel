@@ -46,6 +46,10 @@ let slideCorrente = 0;
 let vettoreImmagini = document.querySelectorAll(".main-image img");
 vettoreImmagini[slideCorrente].classList.add("active");
 
+/* prendo il vettore di tutte le miniature e aggiungo la classe active all'indice corrente*/
+let vettoreMiniature = document.querySelectorAll(".thumb");
+vettoreMiniature[slideCorrente].classList.add("active");
+
 
 /* Variabili dei 2 bottoni*/
 let BottoneSu = document.getElementById("button-up");
@@ -58,12 +62,21 @@ BottoneSu.addEventListener("click", function(){
     /* se l'utente è sulla prima slide quando clicca, allora resetto tornando all'ultima*/
     if(slideCorrente == 0){
         vettoreImmagini[slideCorrente].classList.remove("active");
+        vettoreMiniature[slideCorrente].classList.remove("active");
+
         slideCorrente = vettoreImmagini.length - 1;
+
         vettoreImmagini[slideCorrente].classList.add("active");
+        vettoreMiniature[slideCorrente].classList.add("active");
     }else{ //altrimenti decremento il contatore della slide
         vettoreImmagini[slideCorrente].classList.remove("active");
+        vettoreMiniature[slideCorrente].classList.remove("active");
+
         slideCorrente--;
+
         vettoreImmagini[slideCorrente].classList.add("active");
+        vettoreMiniature[slideCorrente].classList.add("active");
+
     }
 });
 
@@ -73,12 +86,21 @@ BottoneGiu.addEventListener("click", function(){
      /* se l'utente è sull'ultima slide quando clicca, allora resetto tornando alla prima*/
     if(slideCorrente == vettoreImmagini.length - 1){
         vettoreImmagini[slideCorrente].classList.remove("active");
+        vettoreMiniature[slideCorrente].classList.remove("active");
+
         slideCorrente = 0;
+
         vettoreImmagini[slideCorrente].classList.add("active");
+        vettoreMiniature[slideCorrente].classList.add("active");
     }else{ //altrimenti incremento il contatore della slide
         vettoreImmagini[slideCorrente].classList.remove("active");
+        vettoreMiniature[slideCorrente].classList.remove("active");
+
         slideCorrente++;
+
         vettoreImmagini[slideCorrente].classList.add("active");
+        vettoreMiniature[slideCorrente].classList.add("active");
+
     }
 })
 
