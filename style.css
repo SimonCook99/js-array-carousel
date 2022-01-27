@@ -16,6 +16,8 @@
     position: relative;
 
     width: 80%;
+
+    height: 364px;
 }
 
 
@@ -52,6 +54,8 @@
 
 .main-image img{
     width: 100%;
+    height: 100%;
+    
     display: none; /* invisibile senza la classe active*/
 }
 
