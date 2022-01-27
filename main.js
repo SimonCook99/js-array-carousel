@@ -50,6 +50,10 @@ vettoreImmagini[slideCorrente].classList.add("active");
 let vettoreMiniature = document.querySelectorAll(".thumb");
 vettoreMiniature[slideCorrente].classList.add("active");
 
+/* prendo il vettore di tutte le descrizioni delle immagini e aggiungo la classe active all'indice corrente*/
+let vettoreDettagli = document.querySelectorAll(".details");
+vettoreDettagli[slideCorrente].classList.add("active");
+
 
 /* Variabili dei 2 bottoni*/
 let BottoneSu = document.getElementById("button-up");
@@ -63,19 +67,23 @@ BottoneSu.addEventListener("click", function(){
     if(slideCorrente == 0){
         vettoreImmagini[slideCorrente].classList.remove("active");
         vettoreMiniature[slideCorrente].classList.remove("active");
+        vettoreDettagli[slideCorrente].classList.remove("active");
 
         slideCorrente = vettoreImmagini.length - 1;
 
         vettoreImmagini[slideCorrente].classList.add("active");
         vettoreMiniature[slideCorrente].classList.add("active");
+        vettoreDettagli[slideCorrente].classList.add("active");
     }else{ //altrimenti decremento il contatore della slide
         vettoreImmagini[slideCorrente].classList.remove("active");
         vettoreMiniature[slideCorrente].classList.remove("active");
+        vettoreDettagli[slideCorrente].classList.remove("active");
 
         slideCorrente--;
 
         vettoreImmagini[slideCorrente].classList.add("active");
         vettoreMiniature[slideCorrente].classList.add("active");
+        vettoreDettagli[slideCorrente].classList.add("active");
 
     }
 });
@@ -87,19 +95,24 @@ BottoneGiu.addEventListener("click", function(){
     if(slideCorrente == vettoreImmagini.length - 1){
         vettoreImmagini[slideCorrente].classList.remove("active");
         vettoreMiniature[slideCorrente].classList.remove("active");
+        vettoreDettagli[slideCorrente].classList.remove("active");
 
         slideCorrente = 0;
 
         vettoreImmagini[slideCorrente].classList.add("active");
         vettoreMiniature[slideCorrente].classList.add("active");
+        vettoreDettagli[slideCorrente].classList.add("active");
+
     }else{ //altrimenti incremento il contatore della slide
         vettoreImmagini[slideCorrente].classList.remove("active");
         vettoreMiniature[slideCorrente].classList.remove("active");
+        vettoreDettagli[slideCorrente].classList.remove("active");
 
         slideCorrente++;
 
         vettoreImmagini[slideCorrente].classList.add("active");
         vettoreMiniature[slideCorrente].classList.add("active");
+        vettoreDettagli[slideCorrente].classList.add("active");
 
     }
 })

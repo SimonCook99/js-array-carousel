@@ -36,6 +36,7 @@
 
 .details.active{
     display: block;
+    transition: all 1s;
 }
 
 .details h2{
@@ -55,11 +56,12 @@
 .main-image img{
     width: 100%;
     height: 100%;
-    
+
     display: none; /* invisibile senza la classe active*/
 }
 
 .main-image img.active{
+    transition: all 1s;
     display: block;
 }
 
